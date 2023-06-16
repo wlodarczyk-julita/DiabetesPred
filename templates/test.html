@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Wizard-v1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="../static/css/raleway-font.css">
+	<link rel="stylesheet" type="text/css"
+		href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="../static/css/styleTest.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="page-content" style="background-image: url('../static/img/backgroundForm.jpg')">
+		<div class="wizard-v1-content">
+			<div class="wizard-form">
+				<form class="form-register" id="form-register" action="/form" method="post">
+					<div id="form-total">
+						<!-- SECTION 1 -->
+						<h2>
+							<span class="step-icon"><i class="zmdi zmdi-account"></i></span>
+							<span class="step-number">Krok 1</span>
+							<span class="step-text">Dane ogólne</span>
+						</h2>
+						<section>
+							<div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="sex">Płeć</label>
+										<select name="sex" id="sex" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Kobieta</option>
+											<option value="0">Mężczyzna</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label for="bmi">BMI</label>
+										<input type="number" placeholder="BMI" class="form-control" id="bmi" name="bmi" min="1"
+											required>
+										<small>Jeśli nie znasz wartości swojego BMI możesz je
+											policzyć w zakładce <a href="/bmi">kalkulator BMI</a></small>
+									</div>
+									<div class="form-holder">
+										<label for="age">Data urodzenia</label>
+										<input type="date" class="form-control" id="age" name="age" max="2023-01-01" required>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- SECTION 2 -->
+						<h2>
+							<span class="step-icon"><i class="zmdi zmdi-card"></i></span>
+							<span class="step-number">Krok 2</span>
+							<span class="step-text">Styl życia</span>
+						</h2>
+						<section>
+							<div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="hp">Czy występuje u Ciebie wysokie ciś00 krwi?</label>
+										<select name="hp" id="hp" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Tak</option>
+											<option value="0">Nie</option>
+										</select>
+										<small>Nie znasz odpowiedzi na to pytanie? Zapoznaj się z
+											klasyfikacją <a href="https://komtek24.pl/userdata/public/assets//normy-cis0nia-tetniczego-1.png">ciś0nia tętniczego</a></small>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="smoke">Czy wypaliłeś więcej niż 100 papierosów (ok. 5 paczek) w
+											ciągu całego życia?</label>
+										<select name="smoke" id="smoke" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Tak</option>
+											<option value="0">Nie</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="physActivity">Czy dbasz o codzienną aktywność fizyczną? (Nie
+											wliczając pracy)</label>
+										<select name="physActivity" id="physActivity" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Tak</option>
+											<option value="0">Nie</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="fruit">Czy konsumujesz przynajmniej jeden owoc dziennie?</label>
+										<select name="fruit" id="fruit" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Tak</option>
+											<option value="0">Nie</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="veggie">Czy konsumujesz przynajmniej jedno warzywo dziennie?</label>
+										<select name="veggie" id="veggie" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="1">Tak</option>
+											<option value="0">Nie</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- SECTION 2 -->
+						<h2>
+							<span class="step-icon"><i class="zmdi zmdi-card"></i></span>
+							<span class="step-number">Krok 3</span>
+							<span class="step-text">Samopoczucie</span>
+						</h2>
+						<section>
+							<div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="generalHealth">Jak oceniasz swoje ogólne samopoczucie?</label>
+										<select name="generalHealth" id="generalHealth" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="5">1</option>
+											<option value="10">2</option>
+											<option value="15">3</option>
+											<option value="20">4</option>
+											<option value="25">5</option>
+											<option value="30">6</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="mentalHealth">Jak oceniasz swoje psychiczne samopoczucie?</label>
+										<select name="mentalHealth" id="mentalHealth" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="5">1</option>
+											<option value="10">2</option>
+											<option value="15">3</option>
+											<option value="20">4</option>
+											<option value="25">5</option>
+											<option value="30">6</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="physHealth">Jak oceniasz swoje fizyczne samopoczucie?</label>
+										<select name="physHealth" id="physHealth" class="form-control" required>
+											<option value="" disabled selected>Wybierz ..</option>
+											<option value="5">1</option>
+											<option value="10">2</option>
+											<option value="15">3</option>
+											<option value="20">4</option>
+											<option value="25">5</option>
+											<option value="30">6</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- SECTION 3 -->
+						<h2>
+							<span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+							<span class="step-number">Krok 4</span>
+							<span class="step-text">Podsumowanie</span>
+						</h2>
+						<section>
+							<div class="inner">
+								<h3>Twoje odpowiedzi</h3>
+								<div class="form-row table-responsive">
+									<table class="table">
+										<tbody>
+											<tr class="space-row">
+												<th>Płeć:</th>
+												<td id="sex-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>BMI:</th>
+												<td id="BMI-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Data urodzenia:</th>
+												<td id="age-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Podwyższone ciś00 krwi:</th>
+												<td id="hp-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Pale0 papierosów:</th>
+												<td id="smoke-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Aktywność fizyczna:</th>
+												<td id="physActivity-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Owoce:</th>
+												<td id="fruit-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Warzywa:</th>
+												<td id="veggie-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Samopoczucie ogólne:</th>
+												<td id="generalHealth-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Samopoczucie psychiczne:</th>
+												<td id="mentalHealth-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Samopoczucie fizyczne:</th>
+												<td id="physHealth-val"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+							</div>
+						</section>
+					</div>
+					<button>Podsumuj</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="../static/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script src="../static/js/jquery.steps.js"></script>
+	<script src="../static/js/mainTest.js"></script>
+</body>
+
+</html>

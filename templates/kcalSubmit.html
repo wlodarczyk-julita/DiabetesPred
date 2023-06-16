@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="../static/css/styleKcal.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="../static/css/bootstrap.min.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>kalkulator spożywanych kalorii</h1>
+							<p>
+								Ten kalkulator pomoże Ci obliczyć ilość kalorii, które powinieneś spożywać codziennie,
+								aby osiągnąć swój cel! Po wypełnieniu formularza, obliczone zostanie Twoje dzienne zapotrzebowanie kaloryczne.
+								<br> Na podstawie obliczonego dziennej ilości kalorii, kalkulator wyświetli:<br>
+
+								&#x2022; Ilość kalorii do <strong>nabrania masy</strong> <br>
+
+								&#x2022; Ilość kalorii do <strong>utrzymania masy</strong><br>
+
+								&#x2022; Ilość kalorii do <strong>utraty wagi</strong>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<div>
+								<span><strong>Zero kaloryczne:</strong></span>
+								<p class="kcalSubmit">{{ kcal }}</p>
+								<p><small>Wynik powyższego równania stanowi indywidualne zapotrzebowanie kaloryczne na utrzymanie wagi jaką aktualnie posiadasz. 
+									Oznacza to, że jest to ilość kalorii, która nie spowoduje żadnych zmian w Twojej masie ciała.</small></p>
+								<br>
+							</div>
+							<div>
+								<span><strong>Redukcja masy:</strong></span>
+								<p class="kcalSubmit">{{ kcalRedu }}</p>
+								<p><small>W przypadku redukcji tkanki tłuszczowej, niezbędny jest niedobór kaloryczny. 
+									Dlatego Twoje zero kaloryczne zostało pomniejszone o odpowiedni współczynnik.</small>
+								</p>
+								<br>
+							</div>
+							<div>
+								<span><strong>Nabranie masy:</strong></span>
+								<p class="kcalSubmit">{{ kcalMass }}</p>
+								<p><small>W przypadku budowania masy mięśniowej, niezbędna jest nadwyżka kaloryczna.
+									Dlatego Twoje zero kaloryczne zostało powiększone o odpowiedni współczynnik.</small>
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

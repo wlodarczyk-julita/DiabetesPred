@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Booking Form HTML Template</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="../static/css/styleBMI.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="../static/css/bootstrap.min.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        td {
+            padding: 10px 0;
+            border-bottom: 1px #ccc solid;
+            border-top: 1px #ccc solid;
+            width: 700px;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+
+        .square {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            display: inline-block;
+            margin-left: 10px;
+            box-shadow: 17px 16px 15px -16px rgba(130, 130, 130, 1);
+        }
+
+        .squareText {
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+            padding-left: 10px;
+        }
+        .rectange {
+            height: 20px;
+            width: 19%;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-md-push-5">
+                        <div class="booking-cta">
+                            <h1>Body Mass Index</h1>
+                            <p>
+                                Kalkulator BMI to proste narzędzie, które pomaga ocenić proporcje Twojej masy ciała i
+                                określić, czy Twoja waga jest proporcjonalna do wzrostu. BMI jest powszechnie stosowanym
+                                wskaźnikiem do oceny nadwagi, niedowagi lub prawidłowej masy ciała.<br><br>
+
+                                Aby skorzystać z kalkulatora BMI, wystarczy podać swoją wagę w kilogramach oraz wzrost w
+                                metrach kwadratowych. Kalkulator obliczy Twoje BMI i wskaże, w jakim zakresie znajduje
+                                się Twoja masa ciała. Następnie otrzymasz interpretację wyniku zgodnie z kategorią BMI,
+                                taką jak niedowaga, prawidłowa masa ciała, nadwaga lub otyłość.<br><br>
+
+                                Skorzystaj z naszego kalkulatora BMI i zdobądź informacje na temat swojej masy ciała już
+                                teraz!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-pull-7">
+                        <div class="booking-form">
+                            <form action="/bmi" method="post">
+                                <div class="form-group">
+                                    <div>
+                                        <span><strong>Wynik:</strong></span>
+                                        <p class="bmiSubmit" id="bmiSubmit">{{ bmi }}</p>
+                                        <p class="bmiSubmitDescribe" id="bmiSubmitDescribe">{{ bmiDescribe }}</p><br>
+                                        <div class="rectange" style="background-color: #638475;"></div>
+                                        <div class="rectange" style="background-color: #90e39a;"></div>
+                                        <div class="rectange" style="background-color: #ddf093;"></div>
+                                        <div class="rectange" style="background-color: #f6d0b1;"></div>
+                                        <div class="rectange" style="background-color: #ce4760;"></div>
+                                        <table>
+                                            <tr class="container1">
+                                                <td>
+                                                    <div >
+                                                        <div class="square" style="background-color: #638475;">
+                                                        </div>
+                                                        <p class="squareText">Niedowaga</p>
+                                                </td>
+                                    </div>
+                                    </tr>
+                                    <tr  class="container2">
+                                        <td>
+                                            <div>
+                                                <div class="square" style="background-color: #90e39a;">
+                                                </div>
+                                                <p class="squareText">Waga w normie</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="container3">
+                                        <td>
+                                            <div>
+                                                <div class="square" style="background-color: #ddf093;">
+                                                </div>
+                                                <p class="squareText">Nadwaga</p>
+                                        </td>
+                                    </tr>
+                                    <tr  class="container4">
+                                        <td>
+                                            <div>
+                                                <div class="square" style="background-color: #f6d0b1;">
+                                                </div>
+                                                <p class="squareText">Otyłość</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="container5">
+                                        <td>
+                                            <div>
+                                                <div class="square" style="background-color: #ce4760;">
+                                                </div>
+                                                <p class="squareText">Skrajna otyłość</p>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../static/js/bmiSubmit.js" defer>
+        
+    </script>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
